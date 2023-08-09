@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContainsNTP</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body contenteditable="true">
+    contains ntp <br>
+    you can edit this
+    <br>boring
+    <br>text
+    <br>this saves after refresh thats it
+    <br>just dont make it too big ...
+</body>
+    <script>
+        document.querySelector("body").innerHTML = localStorage.getItem("i")
+        setInterval(function(){
+            localStorage.setItem("i", document.querySelector("body").innerHTML)
+        }, 1000)
+    </script>
+</html>
